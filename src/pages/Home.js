@@ -7,7 +7,7 @@ const Home = () => {
             <div className="banner">
             <img src={bannerImage} alt="Banner" className="img-fluid" style={{width:"100%",maxHeight: "50vh",overflow: "hidden",objectFit: "cover"}} />
           </div>
-    <h1 style={{ marginLeft: "2rem" }}>Welcome to SubsHub!!</h1>
+    <h1 style={{ marginLeft: "2rem" }}>Welcome to Subscriptionssss!!</h1>
     <h4 style={{ marginLeft: "2rem" }}>Streamline your subscriptions with our all-in-one management system.</h4>
       </>
     )
