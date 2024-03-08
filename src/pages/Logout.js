@@ -35,7 +35,7 @@ const LogoutButton = ({ onLogout }) => {
     <button onClick={handleLogout}
     style={{
       position: 'absolute',
-      top: '20px', // Adjust the top position as needed
+      top: '26px', // Adjust the top position as needed
       right: '20px' // Adjust the right position as needed
     }} >Logout</button>
     

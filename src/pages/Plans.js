@@ -117,7 +117,7 @@ const Plans = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "cornsilk" }}>
+    <div style={{ backgroundColor: "#5555" }}>
       <h2 style={{ margin: "20px" }}>Add Plan</h2>
       <form style={{ margin: "20px" }} onSubmit={handleAddPlan}>
         <label style={{ padding: "5px" }}>Plan Name :</label>
@@ -172,7 +172,7 @@ const Plans = () => {
         </div>
 
         <br />
-        <Button variant="warning" type="submit">
+        <Button variant="success" type="submit">
           Add Plan
         </Button>
       </form>

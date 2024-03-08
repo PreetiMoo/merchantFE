@@ -14,7 +14,7 @@ body {
 h1, h2, h3 {
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
-  color: #444;
+  color: #030303;
 }
 
 p {
@@ -101,7 +101,7 @@ input{
 }
 
 label{
-  min-width: 108px;
+  min-width: 200px;
   padding-bottom: 10px;
 }
 
@@ -152,3 +152,10 @@ button:hover {
   max-width: 250px;
 }
 
+.navbar-nav .nav-link:hover {
+  color: #0a0707; /* Change color on hover */
+  /* background-color: #f8f9fa; Change background color on hover */
+  border-radius: 5px; /* Optional: Add border-radius for rounded edges */
+  font-weight: bold; /* Change font weight on hover */
+  /* font-style: italic; Change font style on hover */
+}

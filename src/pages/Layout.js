@@ -24,8 +24,8 @@ const Layout = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container>
+      <Navbar bg="light" expand="lg" className="sticky-top">
+        <Container style={{minWidth:"100%"}}>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} alt="Logo" width="50" height="50" />{" "}
             {/* Adjust width and height as needed */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Button } from "react-bootstrap";
+import { Button, Card} from "react-bootstrap";
 
 const Products = () => {
   const [productName, setProductName] = useState("");
@@ -86,7 +86,7 @@ const Products = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#5555", height: "inherit" }}>
+    <div style={{ backgroundColor: "#5555", padding: "1rem" }}>
       <h2 style={{ margin: "15px" }}>Add Product</h2>
       <form
         onSubmit={handleAddProduct}
@@ -97,60 +97,59 @@ const Products = () => {
         }}>
         <label style={{ marginRight: "20px" }}>
           Product Name :
-          <input
+        </label>
+        <input
             type="text"
             value={productName}
             onChange={handleProductNameChange}
           />
-        </label>
         <br />
         <label style={{ marginRight: "20px" }}>
           Description :
-          <input
+        </label>
+        <input
             type="text"
             value={description}
             onChange={handleDescriptionChange}
           />
-        </label>
         <br />
         <label style={{ marginRight: "20px" }}>
           Price :
-          <input
+        </label>
+        <input
             type="number" // Change type to number for price input
             value={price}
             onChange={handlePriceChange}
           />
-        </label>
         <br />
-        <label style={{ marginRight: "20px", display: "block" }}>
+        <label style={{ marginRight: "20px" }}>
           Image:
-          <input
+        </label>
+        <input
             type="text"
             value={image}
             onChange={handleImageChange}
             placeholder="Paste image link here"
           />
-        </label>
         <br />
         {/* <button type="submit">Add product</button> */}
-        <Button variant="warning" type="submit">
+        <Button variant="success" type="submit">
           Add product
         </Button>
       </form>
 
       <h2 style={{ marginTop: "revert", marginLeft: "15px" }}>Product List</h2>
       <ul>
-        {productList.map((product) => (
-          <li key={product.id}>
-            <div>Product Name: {product.prod_name}</div>
-            <div>Description: {product.description}</div>
-            <div>Price: {product.price}</div>
-            <div>
-              Image:
-              <img src={product.image} style={{ maxWidth: "250px" }} />
-            </div>
-          </li>
-        ))}
+      {productList.map((product) => (
+        <Card key={product.id} style={{ width: '18rem', margin:"2rem" }}>
+          <Card.Img variant="top" src={product.image} style={{ maxWidth: '100%' }} />
+          <Card.Body>
+            <Card.Title>Product Name: {product.prod_name}</Card.Title>
+            <Card.Text>Description: {product.description}</Card.Text>
+            <Card.Text>Price: {product.price}</Card.Text>
+          </Card.Body>
+        </Card>
+      ))}
       </ul>
     </div>
   );
