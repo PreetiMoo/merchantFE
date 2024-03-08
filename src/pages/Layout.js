@@ -15,7 +15,7 @@ const Layout = () => {
 
   const handleLogout = () => {
     // Handle logout logic here
-    console.log("Logging out...");
+    console.log("Logging out....");
   };
 
   const handleSettingsClick = () => {
